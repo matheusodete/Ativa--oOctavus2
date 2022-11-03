@@ -1,0 +1,485 @@
+
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Rubik";
+      }
+
+      a,
+      a:visited,
+      a:hover,
+      a:active {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      :root { /* PARA EDITAR (Aplique suas cores abaixo, cheque a página para ver se combinam juntas.) */
+        --primary-color: #32322C;
+        --secondary-color: #5DF0A9;
+        --tertiary-color: #36F1CD;
+      }
+
+      html {
+        width: 100vw;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        background-color: #F1F1F1;
+      }
+      
+      main {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .right-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        max-width: 500px;
+        min-width: 375px;
+        position: relative;
+        border: 30px solid #FFF;
+        border-radius: 30px;
+        background-color: #FFF;
+        
+      }
+        
+    
+      h2 {
+        font: bold 30px Rubik;
+        color: #844DDD;
+        text-align: center;
+        margin-top: 20px;
+        
+      }
+
+      h1 {
+        font: normal normal normal 300 20px/25px Rubik;
+        color: var(--primary-color);
+        text-align: center;
+      }
+
+      .text-bold {
+        font-weight: bold;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      label {
+        font: normal normal normal 18px/35px Rubik;
+        color: var(--primary-color);
+      }
+
+      input:not(input[type="checkbox"]) {
+        background: #f9f9f9;
+        padding: 16px 20px;
+        box-shadow: 0px 0px 3px #0000004d;
+        border-radius: 3px;
+        border: none;
+        font: normal normal 300 24px/28px Rubik;
+        color: var(--primary-color);
+      }
+
+      input:not(input[type="checkbox"]):focus {
+        outline: none;
+      }
+
+      input:not(input[type="checkbox"])::placeholder {
+        color: var(--primary-color);
+      }
+
+      .password {
+        position: relative;
+      }
+
+      .password p {
+        position: absolute;
+        font: normal normal bold 16px/35px Rubik;
+        color: #844DDD;
+        top: 52px;
+        right: 20px;
+        user-select: none;
+      }
+
+      .whatsapp {
+        margin-top: 30px;
+        position: relative;
+      }
+
+      .whatsapp input {
+        padding-left: 70px !important;
+      }
+
+      .whatsapp svg {
+        position: absolute;
+        top: 53px;
+        left: 20px;
+      }
+
+      div {
+        color: #e9f3ff;
+      }
+
+      button {
+        background: var(--secondary-color);
+        box-shadow: 0px 0px 10px #0000004d;
+        border-radius: 15px;
+        border: none;
+        font: normal normal 300 18px/35px Rubik;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 600px;
+        height: 70px;
+        cursor: pointer;
+        transition: filter 0.3s ease-in-out;
+        margin-top: 46px;
+        position: relative;
+        align-content: center;
+      }
+
+
+      button:hover {
+        filter: brightness(0.9);
+      }
+
+      .checkboxs {
+        display: flex;
+        gap: 20px;
+      }
+
+      .checkboxs div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .checkboxs p {
+        font: normal normal bold 16px/35px Rubik;
+        color: var(--primary-color);
+      }
+
+      input[type="checkbox"] {
+        appearance: none;
+        outline: 1px solid #00c853;
+        border-radius: 5px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      input[type="checkbox"]:checked::after {
+        content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='14' height='10.44' viewBox='0 0 14 10.44'><path id='Icon_awesome-check' data-name='Icon awesome-check' d='M4.755,14.812l-4.55-4.55a.7.7,0,0,1,0-.99l.99-.99a.7.7,0,0,1,.99,0L5.25,11.347l6.565-6.565a.7.7,0,0,1,.99,0l.99.99a.7.7,0,0,1,0,.99l-8.05,8.05A.7.7,0,0,1,4.755,14.812Z' transform='translate(0 -4.577)' fill='rgb(0,200,83)'/></svg>");
+        font-size: 14px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        color: #00c853;
+        fill: #00c853;
+        animation: bounce 0.2s;
+      }
+
+      .confirmation {
+        position: relative;
+      }
+
+      .confirmation h1 {
+        font: normal normal normal 35px/44px Rubik;
+        color: var(--primary-color);
+      }
+
+      .confirmation .form-control {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .confirmation input {
+        width: 198px;
+        height: 60px;
+        padding-left: 60px !important;
+        border-radius: 3px 0 0 3px !important;
+      }
+
+      .confirmation button {
+        margin: 0;
+        border-radius: 0 3px 3px 0;
+        width: 302px;
+        transform: translateX(-3px);
+      }
+
+      .confirmation button::after {
+        content: none;
+      }
+
+      .confirmation svg {
+        position: absolute;
+        left: 20px;
+      }
+
+      .not-received {
+        font: normal normal 300 18px/35px Rubik;
+        color: var(--primary-color);
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        input:not(input[type="checkbox"]) {
+          padding: 0 20px;
+          height: 50px;
+          vertical-align: middle;
+        }
+
+        .whatsapp svg {
+          top: 48px;
+        }
+
+        .password p {
+          top: 47px;
+        }
+      }
+
+      @media screen and (max-width: 1025px) {
+        .left-side {
+          display: none;
+        }
+
+        .right-side {
+          width: 100%;
+          height: auto;
+        }
+
+        .container {
+          height: auto;
+          width: 80%;
+          
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .container {
+          padding-bottom: 50px;
+        }
+      }
+
+      @media screen and (max-width: 399px) {
+        .checkboxs p {
+          font-size: 13px;
+        }
+      }
+
+      @media screen and (max-height: 840px) {
+        .container {
+          gap: 20px;
+        }
+
+        button {
+          margin-top: 30px;
+        }
+
+        .whatsapp {
+          margin-top: 0;
+        }
+      }
+
+      @media screen and (max-height: 700px) {
+        .container {
+          gap: 10px;
+        }
+      }
+
+      @media screen and (max-height: 685px) {
+        .confirmation {
+          padding-top: 150px;
+        }
+
+        input:not(input[type="checkbox"]) {
+          padding: 0 20px;
+          height: 50px;
+          vertical-align: middle;
+        }
+
+        .whatsapp svg {
+          top: 48px;
+        }
+
+        .password p {
+          top: 47px;
+        }
+      }
+      /* ---------MODAL-------- */
+      .modal {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        opacity: 0;
+        transition: 250ms opacity ease-in;
+      }
+
+      .modal__container {
+        background-color: white;
+        width: 40rem;
+        padding: 1.5rem;
+        border-radius: 30px;
+        position: relative;
+      }
+
+      .modal__title {
+        text-align: center;
+        color: #ff0e0e;
+        margin-bottom: 1rem;
+      }
+
+      .modal__paragraph {
+        line-height: 1.5rem;
+        border-top: 1px solid #eef1f6;
+        padding: 1rem 0;
+        color: black;
+        text-align: center;
+      }
+
+      .modal__buttons {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      .modal__buttons button {
+        margin-top: 0;
+        height: auto;
+        font-family: inherit;
+        padding: 0.4rem 9.8rem;
+        outline: none;
+        font-size: 1rem;
+        cursor: pointer;
+        border: 1px solid #ff0e0e;
+        border-radius: 0.2rem;
+        background-color: #ff0e0e;
+        color: white;
+      }
+
+      .modal__buttons button::after {
+        content: none;
+      }
+
+      .modal-visible {
+        display: flex;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .close-button {
+        position: absolute;
+        top: -50px;
+        right: -50px;
+      }
+
+      .close-container {
+        position: relative;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+
+      .leftright {
+        height: 4px;
+        width: 50px;
+        position: absolute;
+        margin-top: 24px;
+        background-color: red;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        transition: all 0.3s ease-in;
+      }
+
+      .rightleft {
+        height: 4px;
+        width: 50px;
+        position: absolute;
+        margin-top: 24px;
+        background-color: red;
+        border-radius: 2px;
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in;
+      }
+
+      .close {
+        margin: 60px 0 0 5px;
+        position: absolute;
+        color: white;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease-in;
+        opacity: 0;
+      }
+
+      .close-container:hover .leftright {
+        transform: rotate(-45deg);
+        background-color: #f25c66;
+      }
+
+      .close-container:hover .rightleft {
+        transform: rotate(45deg);
+        background-color: #f25c66;
+      }
+
+      .close-container:hover label {
+        opacity: 1;
+      }
