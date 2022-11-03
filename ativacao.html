@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>"Aqui o nome da sua empresa"</title> <!-- PARA EDITAR -->
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Rubik";
+      }
+
+      a,
+      a:visited,
+      a:hover,
+      a:active {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      :root { /* PARA EDITAR (Aplique suas cores abaixo, cheque a página para ver se combinam juntas.) */
+        --primary-color: #32322C;
+        --secondary-color: #5DF0A9;
+        --tertiary-color: #36F1CD;
+      }
+
+      html {
+        width: 100vw;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        background-color: #F1F1F1;
+      }
+      
+      main {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .right-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        max-width: 500px;
+        min-width: 375px;
+        position: relative;
+        border: 30px solid #FFF;
+        border-radius: 30px;
+        background-color: #FFF;
+        
+      }
+        
+    
+      h2 {
+        font: bold 30px Rubik;
+        color: #844DDD;
+        text-align: center;
+        margin-top: 20px;
+        
+      }
+
+      h1 {
+        font: normal normal normal 300 20px/25px Rubik;
+        color: var(--primary-color);
+        text-align: center;
+      }
+
+      .text-bold {
+        font-weight: bold;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      label {
+        font: normal normal normal 18px/35px Rubik;
+        color: var(--primary-color);
+      }
+
+      input:not(input[type="checkbox"]) {
+        background: #f9f9f9;
+        padding: 16px 20px;
+        box-shadow: 0px 0px 3px #0000004d;
+        border-radius: 3px;
+        border: none;
+        font: normal normal 300 24px/28px Rubik;
+        color: var(--primary-color);
+      }
+
+      input:not(input[type="checkbox"]):focus {
+        outline: none;
+      }
+
+      input:not(input[type="checkbox"])::placeholder {
+        color: var(--primary-color);
+      }
+
+      .password {
+        position: relative;
+      }
+
+      .password p {
+        position: absolute;
+        font: normal normal bold 16px/35px Rubik;
+        color: #844DDD;
+        top: 52px;
+        right: 20px;
+        user-select: none;
+      }
+
+      .whatsapp {
+        margin-top: 30px;
+        position: relative;
+      }
+
+      .whatsapp input {
+        padding-left: 70px !important;
+      }
+
+      .whatsapp svg {
+        position: absolute;
+        top: 53px;
+        left: 20px;
+      }
+
+      div {
+        color: #e9f3ff;
+      }
+
+      button {
+        background: var(--secondary-color);
+        box-shadow: 0px 0px 10px #0000004d;
+        border-radius: 15px;
+        border: none;
+        font: normal normal 300 18px/35px Rubik;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 600px;
+        height: 70px;
+        cursor: pointer;
+        transition: filter 0.3s ease-in-out;
+        margin-top: 46px;
+        position: relative;
+        align-content: center;
+      }
+
+
+      button:hover {
+        filter: brightness(0.9);
+      }
+
+      .checkboxs {
+        display: flex;
+        gap: 20px;
+      }
+
+      .checkboxs div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .checkboxs p {
+        font: normal normal bold 16px/35px Rubik;
+        color: var(--primary-color);
+      }
+
+      input[type="checkbox"] {
+        appearance: none;
+        outline: 1px solid #00c853;
+        border-radius: 5px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      input[type="checkbox"]:checked::after {
+        content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='14' height='10.44' viewBox='0 0 14 10.44'><path id='Icon_awesome-check' data-name='Icon awesome-check' d='M4.755,14.812l-4.55-4.55a.7.7,0,0,1,0-.99l.99-.99a.7.7,0,0,1,.99,0L5.25,11.347l6.565-6.565a.7.7,0,0,1,.99,0l.99.99a.7.7,0,0,1,0,.99l-8.05,8.05A.7.7,0,0,1,4.755,14.812Z' transform='translate(0 -4.577)' fill='rgb(0,200,83)'/></svg>");
+        font-size: 14px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        color: #00c853;
+        fill: #00c853;
+        animation: bounce 0.2s;
+      }
+
+      .confirmation {
+        position: relative;
+      }
+
+      .confirmation h1 {
+        font: normal normal normal 35px/44px Rubik;
+        color: var(--primary-color);
+      }
+
+      .confirmation .form-control {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .confirmation input {
+        width: 198px;
+        height: 60px;
+        padding-left: 60px !important;
+        border-radius: 3px 0 0 3px !important;
+      }
+
+      .confirmation button {
+        margin: 0;
+        border-radius: 0 3px 3px 0;
+        width: 302px;
+        transform: translateX(-3px);
+      }
+
+      .confirmation button::after {
+        content: none;
+      }
+
+      .confirmation svg {
+        position: absolute;
+        left: 20px;
+      }
+
+      .not-received {
+        font: normal normal 300 18px/35px Rubik;
+        color: var(--primary-color);
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        input:not(input[type="checkbox"]) {
+          padding: 0 20px;
+          height: 50px;
+          vertical-align: middle;
+        }
+
+        .whatsapp svg {
+          top: 48px;
+        }
+
+        .password p {
+          top: 47px;
+        }
+      }
+
+      @media screen and (max-width: 1025px) {
+        .left-side {
+          display: none;
+        }
+
+        .right-side {
+          width: 100%;
+          height: auto;
+        }
+
+        .container {
+          height: auto;
+          width: 80%;
+          
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .container {
+          padding-bottom: 50px;
+        }
+      }
+
+      @media screen and (max-width: 399px) {
+        .checkboxs p {
+          font-size: 13px;
+        }
+      }
+
+      @media screen and (max-height: 840px) {
+        .container {
+          gap: 20px;
+        }
+
+        button {
+          margin-top: 30px;
+        }
+
+        .whatsapp {
+          margin-top: 0;
+        }
+      }
+
+      @media screen and (max-height: 700px) {
+        .container {
+          gap: 10px;
+        }
+      }
+
+      @media screen and (max-height: 685px) {
+        .confirmation {
+          padding-top: 150px;
+        }
+
+        input:not(input[type="checkbox"]) {
+          padding: 0 20px;
+          height: 50px;
+          vertical-align: middle;
+        }
+
+        .whatsapp svg {
+          top: 48px;
+        }
+
+        .password p {
+          top: 47px;
+        }
+      }
+      /* ---------MODAL-------- */
+      .modal {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        opacity: 0;
+        transition: 250ms opacity ease-in;
+      }
+
+      .modal__container {
+        background-color: white;
+        width: 40rem;
+        padding: 1.5rem;
+        border-radius: 30px;
+        position: relative;
+      }
+
+      .modal__title {
+        text-align: center;
+        color: #ff0e0e;
+        margin-bottom: 1rem;
+      }
+
+      .modal__paragraph {
+        line-height: 1.5rem;
+        border-top: 1px solid #eef1f6;
+        padding: 1rem 0;
+        color: black;
+        text-align: center;
+      }
+
+      .modal__buttons {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      .modal__buttons button {
+        margin-top: 0;
+        height: auto;
+        font-family: inherit;
+        padding: 0.4rem 9.8rem;
+        outline: none;
+        font-size: 1rem;
+        cursor: pointer;
+        border: 1px solid #ff0e0e;
+        border-radius: 0.2rem;
+        background-color: #ff0e0e;
+        color: white;
+      }
+
+      .modal__buttons button::after {
+        content: none;
+      }
+
+      .modal-visible {
+        display: flex;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .close-button {
+        position: absolute;
+        top: -50px;
+        right: -50px;
+      }
+
+      .close-container {
+        position: relative;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+
+      .leftright {
+        height: 4px;
+        width: 50px;
+        position: absolute;
+        margin-top: 24px;
+        background-color: red;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        transition: all 0.3s ease-in;
+      }
+
+      .rightleft {
+        height: 4px;
+        width: 50px;
+        position: absolute;
+        margin-top: 24px;
+        background-color: red;
+        border-radius: 2px;
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in;
+      }
+
+      .close {
+        margin: 60px 0 0 5px;
+        position: absolute;
+        color: white;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease-in;
+        opacity: 0;
+      }
+
+      .close-container:hover .leftright {
+        transform: rotate(-45deg);
+        background-color: #f25c66;
+      }
+
+      .close-container:hover .rightleft {
+        transform: rotate(45deg);
+        background-color: #f25c66;
+      }
+
+      .close-container:hover label {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="left-side">
+        
+      </section>
+      <section class="right-side" id="right-side">
+        <div class="container">
+          <h2><span class="octavusrep">SuaEmpresa ERP</span></h2>
+          <h1><span class="text-bold">Teste agora por 8 dias grátis </span>sem compromisso o melhor Sistema ERP para Lojas, simples e fácil!</h1>
+          <form>
+            <div class="form-control">
+              <label for="email" class="text-bold">E-mail:</label>
+              <input type="email" id="email" placeholder="seunome@suaempresa.com.br" />
+            </div>
+            <div class="form-control password">
+              <label for="password" class="text-bold">Senha:</label>
+              <input type="text" id="password" onkeydown="removeSpanPassword(event)" />
+              <p id="span-password">SENHA SUGERIDA</p>
+            </div>
+            <div class="form-control">
+              <label for="name" class="text-bold">Nome:</label>
+              <input type="text" id="name" placeholder="Seu nome aqui" />
+            </div>
+            <div class="form-control whatsapp">
+              <label for="whatsapp"> <span class="text-bold">WhatsApp</span> para contato! </label>
+              <input type="tel" id="whatsapp" placeholder="(55) 9 9999-9999" onkeypress="maskDefault(this, maskPhone);" onblur="maskDefault(this, maskPhone);" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <path id="Icon_simple-whatsapp" data-name="Icon simple-whatsapp" d="M21.873,17.978c-.376-.187-2.209-1.084-2.55-1.208s-.591-.187-.841.188-.964,1.2-1.18,1.452-.436.263-.808.094a10.145,10.145,0,0,1-3-1.856,11.341,11.341,0,0,1-2.075-2.587c-.217-.375-.024-.581.162-.769.17-.169.376-.431.564-.654a3.169,3.169,0,0,0,.371-.62.687.687,0,0,0-.031-.655c-.094-.187-.84-2.025-1.153-2.757s-.609-.638-.84-.638c-.215-.019-.464-.019-.714-.019a1.409,1.409,0,0,0-1,.449,4.173,4.173,0,0,0-1.306,3.094A7.314,7.314,0,0,0,9,15.335a16.668,16.668,0,0,0,6.375,5.606c.892.375,1.588.6,2.13.786a5.171,5.171,0,0,0,2.35.151,3.847,3.847,0,0,0,2.52-1.782,3.094,3.094,0,0,0,.225-1.781c-.093-.169-.337-.262-.712-.431m-6.808,9.3h-.02a12.5,12.5,0,0,1-6.319-1.725l-.45-.267L3.6,26.414l1.256-4.556-.3-.469A12.4,12.4,0,0,1,23.866,6.1,12.235,12.235,0,0,1,27.5,14.833,12.413,12.413,0,0,1,15.084,27.189M25.65,4.311A15.177,15.177,0,0,0,15.056,0,14.862,14.862,0,0,0,2.12,22.3L0,30l7.919-2.065a15.078,15.078,0,0,0,7.137,1.809h.008A14.925,14.925,0,0,0,30,14.874,14.743,14.743,0,0,0,25.631,4.36" fill="#00c853" />
+              </svg>
+            </div>
+            <button onclick="sendData(event)">
+              <p><span class="text-bold">Experimentar grátis</span> por 8 dias</p>
+            </button>
+          </form>
+        </div>
+      </section>  
+    </main>
+    <!-- ---------MODAL-------- -->
+    <div class="modal" id="modal">
+      <div class="modal__container">
+        <div class="close-button" id="close-button">
+          <div class="close-container">
+            <div class="leftright"></div>
+            <div class="rightleft"></div>
+            <label class="close">fechar</label>
+          </div>
+        </div>
+        <h1 class="modal__title">Ocorreu um erro!</h1>
+        <p class="modal__paragraph" id="modal-paragraph"></p>
+        <div class="modal__buttons">
+          <button>Fechar</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      /* FUNÇÃO PARA GERAR UMA SENHA AUTOMATICAMENTE, RECOMENDAMOS NÃO MUDAR!*/
+      const randomPassword = Array(7)
+        .fill("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+        .map(x => x[Math.floor(Math.random() * x.length)])
+        .join("");
+      document.querySelector("#password").value = randomPassword;
+
+      function removeSpanPassword(event) {
+        event.target.type = "password";
+        if (document.querySelector("#span-password")) {
+          document.querySelector("#span-password").remove();
+        }
+        return;
+      }
+
+      async function sendData(event) {
+        event.preventDefault();
+        
+        /* PARA EDITAR (AQUI VAI A URL DO SEU SITE) */
+        const url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+        const name = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const password = document.querySelector("#password").value;
+        let whatsapp = document.querySelector("#whatsapp").value.replace(/[()]/g, "").replace("-", "").replace(/\s/g, "");
+        console.log(whatsapp);
+
+        /* PARA EDITAR (PARA SABER DE ONDE VEM A CONVERSÃO, adicione um trecho sem espaçamentos ou caracteres especiais) */
+        const origin = "PorExemploLeadVindoDoSite";
+
+        const modal = document.querySelector("#modal");
+        const modalParagraph = document.querySelector("#modal-paragraph");
+
+        modal.addEventListener("click", event => {
+          event.stopPropagation();
+          modal.classList.remove("modal-visible");
+        });
+        document.querySelector("#close-button").addEventListener("click", () => {
+          modal.classList.remove("modal-visible");
+        });
+
+        switch (true) {
+          case email.replace(/\s/g, "") === "" || !email.includes("@"):
+            modalParagraph.innerHTML = "Por favor, insira um endereço de email válido!";
+            modal.classList.add("modal-visible");
+            return;
+          case password.replace(/\s/g, "") === "" || password.length <= 6:
+            modalParagraph.innerHTML = "Por favor, insira mais de 6 characteres para a senha";
+            modal.classList.add("modal-visible");
+            return;
+          case name.replace(/\s/g, "") === "":
+            modalParagraph.innerHTML = "Por favor, insira um nome válido";
+            modal.classList.add("modal-visible");
+            return;
+          default:
+            break;
+        }
+
+        window.location.href = `${url}`;
+      }
+
+      /* MASCARAS RECOMENDAMOS NÃO MUDAR NADA A PARTIR DESSE PONTO */
+      function maskDefault(o, f) {
+        setTimeout(function () {
+          var v = maskPhone(o.value);
+          if (v != o.value) {
+            o.value = v;
+          }
+        }, 1);
+      }
+
+      function maskPhone(v) {
+        var r = v.replace(/\D/g, "");
+        r = r.replace(/^0/, "");
+        if (r.length > 10) {
+          r = r.replace(/^(\d\d)(\d{1})(\d{4})(\d{4}).*/, "($1) $2 $3-$4");
+        } else if (r.length > 5) {
+          r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+        } else if (r.length > 2) {
+          r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+        } else {
+          r = r.replace(/^(\d*)/, "($1");
+        }
+        return r;
+      }
+    </script>
+  </body>
+</html>
